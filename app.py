@@ -8,6 +8,14 @@ from utils.embeddings import model
 from utils.groq_answer import get_answer
 
 st.set_page_config(page_title="AI Document Chatbot",page_icon="https://img.icons8.com/?size=100&id=10446&format=png&color=000000",layout="wide")
+st.markdown("""
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+[data-testid="stToolbar"] {display: none;}
+</style>
+""", unsafe_allow_html=True)
 # Session State
 if "chats" not in st.session_state:
     st.session_state.chats = {}
